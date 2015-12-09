@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Invitaciones - InnBta.com</title>
+    <title>Profile - InnBta.com</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -129,7 +129,7 @@
                     <a href="#"><i class="fa fa-wrench fa-fw"></i> Soporte<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a href="Admnistrar_intereses.html">Agregar/quitar intereses</a>
+                            <a href="Admnistrar intereses.html">Agregar/quitar intereses</a>
                         </li>
                         <li>
                             <a href="Contacto.html">Contacto</a>
@@ -154,50 +154,46 @@
     <!-- /.navbar-static-side -->
     </nav>
 <div id="page-wrapper">
-    <div>
-<div class="container">
+    
+      
 
-   <div class="row">
-    <div class="col-md-12">
-      <h3invitaciones</h3>
-      <h1>Invitaciones
+            <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div class="login-panel panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Crear Evento</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form role="form">
+                            <fieldset>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Nombre del evento" name="Name" type="input" autofocus>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Direccion del evento" name="Direccion" type="input" autofocus>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input name="Cover" type="checkbox" value="cover">Hay cover?
+                                    </label>
+                                    
+                                    <input class="form-control" placeholder="Cover" name="Cover" type="input" autofocus>
 
-      <table class="table table-striped table-bordered table-responsive">
-        <thead>
-          <tr>
-            <th>Username</th>
-            <th>Nombre del evento</th>
-            <th>Descripcion</th>            
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          <?php
-          include 'user.php';
-          // 1. Add the Read all function
-          $users = User::readAll();
-          foreach ($users as $user) {
-           echo '<tr>';
-           echo '<td>'. $user->id . '</td>';
-           echo '<td>'. $user->username . '</td>';
-           echo '<td>'. $user->password . '</td>';
-           echo '<td width=250>';
-           echo '<a class="btn btn-default" href="read.php?id='.$user->id.'">Aceptar</a>';
-           echo '&nbsp;';
-           echo '<a class="btn btn-success" href="update.php?id='.$user->id.'">Tal vez</a>';
-           echo '&nbsp;';
-           echo '<a class="btn btn-danger" href="delete.php?id='.$user->id.'">No ire</a>';
-           echo '</td>';
-           echo '</tr>';
-         }
-         ?>
-       </tbody>
-     </table>
-   </div>
- </div>
-</div> <!-- /container -->
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Vestimenta del evento" name="Vestimenta" type="input" autofocus>
+                                </div>
+                                
+                                <!-- Change this to a button or input when using this as a form -->
+                                <a href="index.html" class="btn btn-lg btn-success btn-block">Crear Evento</a>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
+            </div>
         <!-- /#page-wrapper -->
 
     </div>
